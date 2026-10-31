@@ -62,6 +62,9 @@ class _WeekScreenState extends State<WeekScreen> {
       messenger.showSnackBar(
         SnackBar(
           content: Text('${course.name} deleted'),
+          // A SnackBar with an action stays until dismissed by default.
+          persist: false,
+          duration: const Duration(seconds: 4),
           action: SnackBarAction(
             label: 'Undo',
             onPressed: () => _repo.restore(course),
@@ -82,7 +85,10 @@ class _WeekScreenState extends State<WeekScreen> {
           IconButton(
             icon: const Icon(Icons.logout),
             tooltip: 'Log out',
-            onPressed: () => widget.backend.auth.signOut(),
+            onPressed: () {
+              ScaffoldMessenger.of(context).clearSnackBars();
+              widget.backend.auth.signOut();
+            },
           ),
         ],
       ),

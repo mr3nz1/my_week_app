@@ -6,8 +6,8 @@ My Week plans your week of courses: add, edit and delete courses, and see your h
 
 ![Login](screenshots/login.png)
 
-![My data in Firestore](screenshots/console.png)
+<!-- ![My data in Firestore](screenshots/console.png) -->
 
-![Live update](screenshots/live.png)
+<!-- ![Live update](screenshots/live.png) -->
 
 ![Second account sees nothing of mine](screenshots/denied.png)
